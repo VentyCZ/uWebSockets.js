@@ -7,6 +7,7 @@ sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noa
 ### SCL
 ```bash
 sudo yum install centos-release-scl
+sudo yum install devtoolset-8-gcc*
 ```
 
 ### GCC, make & C++ x86 headers
@@ -28,7 +29,7 @@ export CPATH='/usr/include'
 
 ### Enable newer GCC for new Bash session
 ```bash
-scl enable devtoolset-7 bash
+scl enable devtoolset-8 bash
 ```
 
 ### BUILD!
