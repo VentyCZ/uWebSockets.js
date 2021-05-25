@@ -16,7 +16,7 @@ VERSION=$(curl -s https://api.github.com/repos/uNetworking/uWebSockets.js/releas
 git config user.email "admin@venty.cz"
 git config user.name "VentyCZ"
 git commit -m "Update to release $VERSION"
-UVERSION=$(echo $VERSION | sed 's/v/C7v/')
+UVERSION="$VERSION-C7"
 git tag $UVERSION
 git push "https://VentyCZ:$TOKEN@github.com/VentyCZ/uWebSockets.js" binaries
 git push "https://VentyCZ:$TOKEN@github.com/VentyCZ/uWebSockets.js" $UVERSION
