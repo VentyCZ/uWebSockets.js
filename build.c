@@ -116,7 +116,7 @@ int main() {
           "x64");
 
     /* If linux we also want arm64 */
-    build("aarch64-linux-gnu-gcc", "aarch64-linux-gnu-g++", "-static-libstdc++ -static-libgcc -s", OS, "arm64");
+    // build("aarch64-linux-gnu-gcc", "aarch64-linux-gnu-g++", "-static-libstdc++ -static-libgcc -s", OS, "arm64");
 #endif
 #endif
 
