@@ -14,22 +14,24 @@ sudo yum install centos-release-scl
 sudo yum install gcc-c++ make gcc-c++-aarch64-linux-gnu glibc-devel.i686
 ```
 
-## Clone
+## Build
+### Clone
 ```bash
 git clone --recursive https://github.com/VentyCZ/uWebSockets.js.git
+cd uWebSockets.js
 ```
 
-## Set C++ include file path
+### Set C++ include file path
 ```bash
 export CPATH='/usr/include'
 ```
 
-## Enable newer GCC for new Bash session
+### Enable newer GCC for new Bash session
 ```bash
 scl enable devtoolset-7 bash
 ```
 
-## BUILD!
+### BUILD!
 ```
 make
 ```
