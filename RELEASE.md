@@ -6,8 +6,10 @@
 TOKEN=""
 
 git checkout binaries
+/usr/bin/rm uws_*.node
 /usr/bin/cp dist/*.node . && git add *.node
-git rev-parse master > source_commit
+/usr/bin/cp dist/uws.js . && git add uws.js
+git rev-parse master > source_commit && git add source_commit
 git checkout master docs/index.d.ts && /usr/bin/cp docs/index.d.ts . && git add index.d.ts
 git checkout .
 VERSION=$(curl -s https://api.github.com/repos/uNetworking/uWebSockets.js/releases/latest | jq -r '.name')
