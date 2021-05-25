@@ -1,7 +1,7 @@
 ## Build
 [DOC](INSTALL.md)
 
-## Release
+## Update binaries
 ```bash
 TOKEN=""
 
@@ -20,4 +20,10 @@ UVERSION="$VERSION-C7"
 git tag $UVERSION
 git push "https://VentyCZ:$TOKEN@github.com/VentyCZ/uWebSockets.js" binaries
 git push "https://VentyCZ:$TOKEN@github.com/VentyCZ/uWebSockets.js" $UVERSION
+```
+
+## Back to master
+```bash
+git checkout master
+git submodule update --init --recursive
 ```
