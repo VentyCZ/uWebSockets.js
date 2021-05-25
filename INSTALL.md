@@ -12,7 +12,7 @@ sudo yum install devtoolset-8-gcc*
 
 ### GCC, make & C++ x86 headers
 ```bash
-sudo yum install gcc-c++ make gcc-c++-aarch64-linux-gnu glibc-devel.i686
+sudo yum install gcc-c++ make glibc-devel.i686
 ```
 
 ## Build
