@@ -27,12 +27,7 @@ cd uWebSockets.js
 export CPATH='/usr/include'
 ```
 
-### Enable newer GCC for new Bash session
-```bash
-scl enable devtoolset-8 bash
-```
-
 ### BUILD!
-```
-make
+```bash
+scl enable devtoolset-8 make
 ```
