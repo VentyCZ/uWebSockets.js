@@ -18,8 +18,8 @@ git config user.name "VentyCZ"
 git commit -m "Update to release $VERSION"
 UVERSION="$VERSION-C7"
 git tag $UVERSION
-git push "https://VentyCZ:$TOKEN@github.com/VentyCZ/uWebSockets.js" binaries
-git push "https://VentyCZ:$TOKEN@github.com/VentyCZ/uWebSockets.js" $UVERSION
+git push "https://VentyCZ:$TOKEN@github.com/hotel-cz/uWebSockets.js" binaries
+git push "https://VentyCZ:$TOKEN@github.com/hotel-cz/uWebSockets.js" $UVERSION
 ```
 
 ## Back to master
