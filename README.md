@@ -64,7 +64,7 @@ Low latencies are key to customer satisfaction and your competitive edge. Run lo
 We've been fully standards compliant with a perfect Autobahn|Testsuite score since 2016<sup><a href="https://unetworking.github.io/uWebSockets.js/report.pdf">[2]</a></sup>. Companies with everything to lose rely on µWebSockets on a daily basis - we power the trading APIs of [Bitfinex.com](https://bitfinex.com) & [Kraken.com](https://www.kraken.com/), handling volumes of multiple billions of USD every day. Other companies include [Trello](https://trello.com), where µWebSockets is serving their 50 million users with real-time board updates.
 
 ### :package: Easily installed
-We *recommend, for simplicity* installing with `yarn add uWebSockets.js@VentyCZ/uWebSockets.js#v19.2.0-C7` or any such [release](https://github.com/VentyCZ/uWebSockets.js/releases).
+We *recommend, for simplicity* installing with `yarn add uWebSockets.js@hotel-cz/uWebSockets.js#v19.2.0-C7` or any such [release](https://github.com/hotel-cz/uWebSockets.js/releases).
 
 Being an open source project, you are of course perfectly free to choose other ways of installation as you might prefer.
 
