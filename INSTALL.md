@@ -6,7 +6,7 @@ sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noa
 ## Install requirements
 ### Pre-requisites
 ```bash
-sudo yum install -y git
+sudo yum install -y git jq
 ```
 
 ### SCL
