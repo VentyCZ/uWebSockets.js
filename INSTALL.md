@@ -33,8 +33,10 @@ git config user.name "VentyCZ"
 
 git pull --recurse-submodules upstream master
 
-TOKEN="" #https://github.com/settings/tokens
+# Fix conflics & commit
 git commit -m "Update from upstream"
+
+TOKEN="" #https://github.com/settings/tokens
 git push "https://VentyCZ:$TOKEN@github.com/hotel-cz/uWebSockets.js"
 ```
 
