@@ -6,8 +6,7 @@ sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noa
 ## Install requirements
 ### SCL
 ```bash
-sudo yum install centos-release-scl
-sudo yum install devtoolset-8-gcc*
+sudo yum install centos-release-scl devtoolset-8-gcc*
 ```
 
 ### GCC, make & C++ x86 headers
