@@ -4,20 +4,25 @@ sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noa
 ```
 
 ## Install requirements
+### Pre-requisites
+```bash
+sudo yum install -y git
+```
+
 ### SCL
 ```bash
-sudo yum install centos-release-scl devtoolset-8-gcc*
+sudo yum install -y centos-release-scl devtoolset-8-gcc*
 ```
 
 ### GCC, make & C++ x86 headers
 ```bash
-sudo yum install gcc-c++ make glibc-devel.i686
+sudo yum install -y gcc-c++ make glibc-devel.i686
 ```
 
 ## Build
 ### Clone
 ```bash
-git clone --recursive https://github.com/VentyCZ/uWebSockets.js.git
+git clone --recursive https://github.com/hotel-cz/uWebSockets.js.git
 cd uWebSockets.js
 ```
 
