@@ -31,6 +31,7 @@ cd uWebSockets.js
 git config user.email "admin@venty.cz"
 git config user.name "VentyCZ"
 
+git remote add upstream https://github.com/uNetworking/uWebSockets.js.git
 git pull --recurse-submodules upstream master
 
 # Fix conflics & commit
