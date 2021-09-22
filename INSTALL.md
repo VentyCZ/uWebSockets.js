@@ -6,7 +6,7 @@ sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noa
 ## Install requirements
 ### Pre-requisites
 ```bash
-sudo yum install -y git
+sudo yum install -y git jq
 ```
 
 ### SCL
@@ -24,6 +24,20 @@ sudo yum install -y gcc-c++ make glibc-devel.i686
 ```bash
 git clone --recursive https://github.com/hotel-cz/uWebSockets.js.git
 cd uWebSockets.js
+```
+
+### Updating from upstream
+```bash
+git config user.email "admin@venty.cz"
+git config user.name "VentyCZ"
+
+git pull --recurse-submodules upstream master
+
+# Fix conflics & commit
+git commit -m "Update from upstream"
+
+TOKEN="" #https://github.com/settings/tokens
+git push "https://VentyCZ:$TOKEN@github.com/hotel-cz/uWebSockets.js"
 ```
 
 ### Set C++ include file path

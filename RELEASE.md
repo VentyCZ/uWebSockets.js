@@ -3,7 +3,7 @@
 
 ## Update binaries
 ```bash
-TOKEN=""
+TOKEN="" #https://github.com/settings/tokens
 
 git checkout binaries
 git rm -f *.node
