@@ -13,6 +13,6 @@ jobs:
       - name: Startup container
         run: docker run --name centos-build -t -d centos-build
       - name: Run build
-        run: docker exec -it centos-build /bin/bash /build.sh
+        run: docker exec centos-build /bin/bash /build.sh
       - name: Stop container
         run: docker rm centos-build -f
