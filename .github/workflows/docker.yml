@@ -18,3 +18,5 @@ jobs:
         run: docker exec centos-build /bin/bash /build.sh
       - name: Stop container
         run: docker rm centos-build -f
+      - name: Release version
+        run: ./.github/workflows/docker/release.sh
