@@ -7,7 +7,7 @@ RUN yum -y install gcc-c++ make glibc-devel.i686
 RUN yum -y install centos-release-scl
 RUN yum -y install devtoolset-8-gcc*
 
-COPY ./build.sh /
+# COPY ./build.sh /
 
 # docker build --no-cache -t centos-build .
 # docker run --name centos-build -t -d centos-build

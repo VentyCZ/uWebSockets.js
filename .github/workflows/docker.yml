@@ -8,10 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Build CentOS image
         run: docker build -t centos-build .github/workflows/docker/
       - name: Startup container
-        run: docker run --name centos-build -t -d centos-build
+        run: docker run --name centos-build -t -d -v "$(pwd)":/source -v "$(pwd)"/.github/workflows/docker/build.sh:/build.sh centos-build
       - name: Run build
         run: docker exec centos-build /bin/bash /build.sh
       - name: Stop container
