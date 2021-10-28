@@ -1,0 +1,22 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build-unix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Build CentOS image
+        run: docker build -t centos-build .github/workflows/docker/
+      - name: Startup container
+        run: docker run --name centos-build -t -d -v "$(pwd)":/source -v "$(pwd)"/.github/workflows/docker/build.sh:/build.sh centos-build
+      - name: Run build
+        run: docker exec centos-build /bin/bash /build.sh
+      - name: Stop container
+        run: docker rm centos-build -f
+      #- name: Release version
+      #  run: ./.github/workflows/docker/release.sh
