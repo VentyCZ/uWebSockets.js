@@ -1,14 +1,15 @@
 #!/bin/bash
 
+git fetch origin binaries:binaries
+git remote add upstream https://github.com/uNetworking/uWebSockets.js.git
 git checkout binaries
+git checkout upstream/binaries -- package.json
 git rm -f *.node
 cp dist/*.node . && git add *.node
 cp dist/uws.js . && git add uws.js
 git status
-git pull origin binaries
 git rev-parse master > source_commit && git add source_commit
 git checkout master docs/index.d.ts && /usr/bin/mv docs/index.d.ts . && git add -A docs/ && git add ./index.d.ts
-git clean -fd
 VERSION=$(curl -s https://api.github.com/repos/uNetworking/uWebSockets.js/releases/latest | jq -r '.name')
 echo $VERSION
 git config --global user.email "admin@venty.cz"
