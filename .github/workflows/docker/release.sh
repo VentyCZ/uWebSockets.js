@@ -14,7 +14,7 @@ echo $VERSION
 git config --global user.email "admin@venty.cz"
 git config --global user.name "VentyCZ"
 git commit -m "Update to release $VERSION"
-UVERSION="$VERSION-C7-TEST"
+UVERSION="$VERSION-C7"
 git tag $UVERSION
-#git push "https://VentyCZ:$TOKEN@github.com/hotel-cz/uWebSockets.js" binaries
+git push "https://VentyCZ:$TOKEN@github.com/hotel-cz/uWebSockets.js" binaries
 git push "https://VentyCZ:$TOKEN@github.com/hotel-cz/uWebSockets.js" $UVERSION
