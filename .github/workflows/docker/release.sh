@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$TOKEN" ]; then
+    echo TOKEN not set!
+    exit 1
+fi
+
 git fetch origin binaries:binaries
 git remote add upstream https://github.com/uNetworking/uWebSockets.js.git
 git checkout binaries
