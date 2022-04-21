@@ -8,6 +8,7 @@ fi
 git fetch origin binaries:binaries
 git remote add upstream https://github.com/uNetworking/uWebSockets.js.git
 git checkout binaries
+git fetch upstream binaries
 git checkout upstream/binaries -- package.json
 git rm -f *.node
 cp dist/*.node . && git add *.node
