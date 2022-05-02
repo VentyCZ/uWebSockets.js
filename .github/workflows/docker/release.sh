@@ -5,11 +5,15 @@ if [ -z "$TOKEN" ]; then
     exit 1
 fi
 
-git fetch origin binaries:binaries
-git remote add upstream https://github.com/uNetworking/uWebSockets.js.git
+# Get our latest binaries
+git fetch origin binaries
 git checkout binaries
+
+# Fetch upstream changes
+git remote add upstream https://github.com/uNetworking/uWebSockets.js.git
 git fetch upstream binaries
 git checkout upstream/binaries -- package.json
+
 git rm -f *.node
 cp dist/*.node . && git add *.node
 cp dist/uws.js . && git add uws.js
