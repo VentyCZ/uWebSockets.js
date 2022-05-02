@@ -6,6 +6,7 @@
 TOKEN="" #https://github.com/settings/tokens
 
 git checkout binaries
+git pull upstream master
 git rm -f *.node
 /usr/bin/cp dist/*.node . && git add *.node
 /usr/bin/cp dist/uws.js . && git add uws.js
