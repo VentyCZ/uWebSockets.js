@@ -1,6 +1,11 @@
 {
   "name": "uWebSockets.js",
-  "version": "20.9.0",
+  "version": "20.10.0",
   "main": "uws.js",
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "exports": {
+    "import": "./ESM_wrapper.mjs",
+    "require": "./uws.js",
+    "types": "./index.d.ts"
+  }
 }
